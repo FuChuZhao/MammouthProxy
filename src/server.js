@@ -17,6 +17,7 @@ app.use('/v1/models', modelRouter)
 app.use('/v1/chat', chatRouter)
 
 // 启动服务器
-app.listen(SERVER_CONFIG.PORT, () => {
-  console.log(`服务已启动在 http://loaclhost:${SERVER_CONFIG.PORT}`)
+app.listen(SERVER_CONFIG.PORT, '0.0.0.0', () => {
+  console.log(`服务已启动在 http://0.0.0.0:${SERVER_CONFIG.PORT}`)
+
 })
